@@ -13,6 +13,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTabsModule} from '@angular/material/tabs';
 import { LayoutModule } from '@angular/cdk/layout';
 import {MatDatepickerModule} from  '@angular/material/datepicker';
+import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [],
@@ -31,13 +34,13 @@ import {MatDatepickerModule} from  '@angular/material/datepicker';
     MatCheckboxModule,
     MatTabsModule,
     LayoutModule,
-    MatButtonModule,
     MatToolbarModule,
     MatCardModule,
     MatRadioModule,
-    MatListModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTableModule,
+    MatSelectModule
   ],
   exports: [
     MatSnackBarModule,
@@ -53,13 +56,13 @@ import {MatDatepickerModule} from  '@angular/material/datepicker';
     MatCheckboxModule,
     MatTabsModule,
     LayoutModule,
-    MatButtonModule,
     MatToolbarModule,
     MatCardModule,
     MatRadioModule,
-    MatListModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: []
 })

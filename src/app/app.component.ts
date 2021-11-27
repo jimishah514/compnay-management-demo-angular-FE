@@ -14,17 +14,21 @@ export class AppComponent {
     }
       
     );
-  //  this.api.postTodo();
-  //  this.api.getTodos().subscribe(res => {
-  //   console.log("todos : ",res);
-  // });
  }
 
  routerNavigator(path){
-   if(path === 'login'){
-    this.router.navigate(['/','login'])
-   } else if (path === 'register') {
-    this.router.navigate(['/','register'])
+   if(path === 'addEmployee'){
+    this.router.navigate(['/','addEmployee'])
+   } else if (path === 'addOffice') {
+    this.router.navigate(['/','addOffice'])
+   } else if(path === 'addTag'){
+    this.router.navigate(['/','addTag'])
+   } else if (path === 'viewEmployees') {
+    this.router.navigate(['/','viewEmployees'])
+   } else if(path === 'viewOffices'){
+    this.router.navigate(['/','viewOffices'])
+   } else if (path === 'viewEmployeeTags') {
+    this.router.navigate(['/','viewEmployeeTags'])
    }
  }
 }

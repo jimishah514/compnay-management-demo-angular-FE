@@ -7,8 +7,7 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  apiDomain = 'https://todo-app-demo1.herokuapp.com';
-  //apiDomain = 'http://localhost:3000';
+  apiDomain = 'http://localhost:3000';
 
   helloWorld() {
     debugger
@@ -19,19 +18,65 @@ export class ApiService {
     }
   }
 
-  postTodo() {
-    debugger
+  addEmployee(emp) {
     try {
-      return this.http.post(`${this.apiDomain}/todo`,'').toPromise();
+      return this.http.post(`${this.apiDomain}/employee`,emp).toPromise();
     } catch {
       throw Error;
     }
   }
 
-  getTodos() {
-    debugger
+  addOffice(office) {
     try {
-      return this.http.get(`${this.apiDomain}/todos`);
+      return this.http.post(`${this.apiDomain}/office`,office).toPromise();
+    } catch {
+      throw Error;
+    }
+  }
+
+  addTag(tag) {
+    try {
+      return this.http.post(`${this.apiDomain}/tag`,tag).toPromise();
+    } catch {
+      throw Error;
+    }
+  }
+
+  getEmployees() {
+    try {
+      return this.http.get(`${this.apiDomain}/employees`).toPromise();
+    } catch {
+      throw Error;
+    }
+  }
+
+  getOffices() {
+    try {
+      return this.http.get(`${this.apiDomain}/offices`).toPromise();
+    } catch {
+      throw Error;
+    }
+  }
+
+  getEmployeeTags(empId) {
+    try {
+      return this.http.get(`${this.apiDomain}/employeetags?employeeId=${empId}`).toPromise();
+    } catch {
+      throw Error;
+    }
+  }
+
+  getOfficeById(id) {
+    try {
+      return this.http.get(`${this.apiDomain}/offices/${id}`).toPromise();
+    } catch {
+      throw Error;
+    }
+  }
+
+  updateTag({id,tag}) {
+    try {
+      return this.http.patch(`${this.apiDomain}/tag`,{id,tag}).toPromise();
     } catch {
       throw Error;
     }

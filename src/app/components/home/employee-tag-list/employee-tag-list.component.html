@@ -1,0 +1,24 @@
+<mat-toolbar>
+    <span>{{empName}} Tag List</span>
+</mat-toolbar>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div *ngIf="employeeTags?.length !== 0" class="card-body p-0">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let empTag of employeeTags; index as i;">
+                       <div>
+                           <p *ngIf="!edit">{{empTag.tag}}<button *ngIf="!edit" (click)="toggleEdit(i)" mat-button>Edit</button></p>
+                           <input  *ngIf="edit" matInput type="text" name="editTag" [(ngModel)]="employeeTags[i].tag" (focusout)="editTag = {};"
+                        (keydown.enter)="updateTag(tag)"><button *ngIf="edit" (click)="saveTag(employeeTags[i].id,employeeTags[i].tag)" mat-button>Save</button><button *ngIf="edit" (click)="toggleEdit(i)" mat-button>Edit</button></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  
+  

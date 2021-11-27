@@ -2,8 +2,11 @@
 <mat-toolbar >
   <mat-toolbar-row>
      <span class="spacer"></span>
-     <a mat-button (click)="routerNavigator('register')">Register</a>
-     <a mat-button (click)="routerNavigator('login')">Login</a>
+     <a mat-button (click)="routerNavigator('addEmployee')">Add Employee</a>
+     <a mat-button (click)="routerNavigator('addOffice')">Add Office</a>
+     <a mat-button (click)="routerNavigator('addTag')">Add Tags</a>
+     <a mat-button (click)="routerNavigator('viewEmployees')">View Employees</a>
+     <a mat-button (click)="routerNavigator('viewOffices')">View Offices</a>
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

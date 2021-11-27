@@ -1,0 +1,23 @@
+<div style="text-align: center;">
+    <mat-toolbar>
+        <span>Office Form</span>
+    </mat-toolbar>
+</div>
+<mat-card class="my-card">
+    <mat-card-content>
+        <form class="my-form" [formGroup]="officeForm" (ngSubmit)="submit()">
+            <mat-form-field class="full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" placeholder="Office Name" name="name" required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="address" placeholder="Office Address" name="address" >
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-raised-button type="submit" color="primary">Submit</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+   
+</mat-card>

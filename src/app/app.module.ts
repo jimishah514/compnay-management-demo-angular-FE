@@ -8,11 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/authentication/register/register.component';
 import { ForgotPasswordComponent } from './components/authentication/forgot-password/forgot-password.component';
-import { DashboardComponent } from './components/home/dashboard/dashboard.component';
-import { TodoListComponent } from './components/home/todo-list/todo-list.component';
-import { TodoComponent } from './components/home/todo/todo.component';
-import { NavbarComponent } from './components/home/navbar/navbar.component';
 import { LoginComponent } from './components/authentication/login/login.component';
+import { EmployeeComponent } from './components/home/employee/employee.component';
+import { EmployeeListComponent } from './components/home/employee-list/employee-list.component';
+import { AddEmployeeComponent } from './components/home/add-employee/add-employee.component';
+import { AddOfficeComponent } from './components/home/add-office/add-office.component';
+import { AddTagComponent } from './components/home/add-tag/add-tag.component';
+import { OfficeListComponent } from './components/home/office-list/office-list.component';
+import { EmployeeTagListComponent } from './components/home/employee-tag-list/employee-tag-list.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +23,13 @@ import { LoginComponent } from './components/authentication/login/login.componen
     RegisterComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    DashboardComponent,
-    TodoListComponent,
-    TodoComponent,
-    NavbarComponent,
+    EmployeeComponent,
+    EmployeeListComponent,
+    AddEmployeeComponent,
+    AddOfficeComponent,
+    AddTagComponent,
+    OfficeListComponent,
+    EmployeeTagListComponent,
   ],
   imports: [
     BrowserModule,
