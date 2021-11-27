@@ -9,6 +9,7 @@ import { isBuffer } from 'util';
   styleUrls: ['./add-tag.component.css']
 })
 export class AddTagComponent implements OnInit {
+  disabled = false
   tagForm = new FormGroup({
     employeeId: new FormControl('', [Validators.required]),
     tag: new FormControl(''),
@@ -25,6 +26,7 @@ export class AddTagComponent implements OnInit {
     this.employeeId = e.value
   }
   submit() {
+    this.disabled = true
     let tagObj = this.tagForm.value
     tagObj.employeeId = this.employeeId
     console.log("tagObj : ",tagObj)

@@ -7,6 +7,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./add-employee.component.css']
 })
 export class AddEmployeeComponent implements OnInit {
+  disabled = false
   empForm = new FormGroup({
     firstName: new FormControl('', [Validators.required]),
     lastName: new FormControl('', [Validators.required]),
@@ -21,6 +22,7 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   submit() {
+    this.disabled = true
     // stop here if form is invalid
     if (this.empForm.invalid) {
       return;

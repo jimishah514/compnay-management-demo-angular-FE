@@ -27,13 +27,13 @@
             <section class="example-section">
                 <label class="example-margin">Office:</label>
                 <mat-radio-group formControlName="officeId">
-                    <mat-radio-button class="example-margin" value="4">Riga</mat-radio-button>
-                    <mat-radio-button class="example-margin" value="2">Tallinn</mat-radio-button>
-                    <mat-radio-button class="example-margin" value="3">Vilnius</mat-radio-button>
+                    <mat-radio-button class="example-margin" value="16">Riga</mat-radio-button>
+                    <mat-radio-button class="example-margin" value="17">Tallinn</mat-radio-button>
+                    <mat-radio-button class="example-margin" value="18">Vilnius</mat-radio-button>
                 </mat-radio-group>
             </section>
             <mat-card-actions>
-                <button mat-raised-button type="submit" color="primary">Submit</button>
+                <button mat-raised-button type="submit" [disabled]= "disabled" color="primary">Submit</button>
             </mat-card-actions>
         </form>
     </mat-card-content>

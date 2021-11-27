@@ -7,6 +7,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./add-office.component.css']
 })
 export class AddOfficeComponent implements OnInit {
+  disabled = false
   officeForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     address: new FormControl(''),
@@ -18,11 +19,16 @@ export class AddOfficeComponent implements OnInit {
   ngOnInit() {
   }
   submit() {
+    this.disabled = true
     if (this.officeForm.invalid) {
       return;
     }
     console.log("this.officeForm : ", this.officeForm.value)
     this.api.addOffice(this.officeForm.value)
   }
+  actionMethod(event: any) {
+    console.log("actionMethod")
+    event.target.disabled = true;
+}
 
 }
